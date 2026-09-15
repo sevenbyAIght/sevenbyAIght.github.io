@@ -12,7 +12,7 @@
         .nav-container{max-width:1000px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;}
         .logo{font-weight:900;letter-spacing:3px;text-transform:uppercase;font-size:1.1rem;cursor:pointer;}
         .nav-menu{display:flex;gap:15px;list-style:none;}
-        .nav-item{font-size:0.8rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--accent-color);cursor:pointer;transition:color 0.3s ease;}
+        .nav-item{font-size:0.8rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--accent-color);cursor:pointer;transition:color 0.3s ease;user-select:none;}
         .nav-item:hover,.nav-item.active{color:var(--text-color);}
         .main-content{max-width:800px;margin:120px auto 60px auto;padding:0 20px;}
         .page-section{display:none;animation:fadeIn 0.4s ease forwards;}
@@ -52,7 +52,7 @@
         <footer>UNDER THE RADAR • SEVENBYAIGHT © 2026</footer>
     </div>
     <script>
-        function switchSection(e,t){const n=document.querySelectorAll(".page-section");n.forEach(e=>e.classList.remove("active"));const o=document.querySelectorAll(".nav-item");o.forEach(e=>e.classList.remove("active"));const c=document.getElementById(e);c&&c.classList.add("active"),t?t.classList.add("active"):(const e=document.querySelector(".nav-menu .nav-item:first-child");e&&e.classList.add("active")),window.scrollTo({top:0,behavior:"smooth"})}
+        function switchSection(e,t){const n=document.querySelectorAll(".page-section");n.forEach(e=>e.classList.remove("active"));const c=document.querySelectorAll(".nav-item");c.forEach(e=>e.classList.remove("active"));const o=document.getElementById(e);o&&o.classList.add("active"),t?t.classList.add("active"):document.querySelector(".nav-menu .nav-item:first-child").classList.add("active"),window.scrollTo({top:0,behavior:"smooth"})}
     </script>
 </body>
 </html>
